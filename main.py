@@ -1,15 +1,14 @@
-from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, CallbackQueryHandler
-from telegram.ext import filters
+from telegram.ext import ApplicationBuilder, CommandHandler, CallbackQueryHandler
 from handlers.start import start
 from handlers.help import list_currencies
 from handlers.convert import convert
 from handlers.presets import create_preset, retrieve_presets, delete_preset
 from handlers.button_handlers import button_handler
 from handlers.stats import info
+from telegram_token import TOKEN
 
 
-app = ApplicationBuilder().token(
-    "501469216:AAHXWA7VrKJjA7WJlPjspG6VDbuAyBqu2v4").build()
+app = ApplicationBuilder().token(TOKEN).build()
 
 app.add_handler(CommandHandler("start", start))
 app.add_handler(CommandHandler("currencies", list_currencies))
