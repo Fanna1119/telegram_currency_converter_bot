@@ -138,6 +138,8 @@ venv.bak/
 # mkdocs documentation
 /site
 
+currency_bot_env/
+
 # mypy
 .mypy_cache/
 .dmypy.json
